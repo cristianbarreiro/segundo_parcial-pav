@@ -1,5 +1,4 @@
 #include "Reserva.h"
-#include "Pelicula.h"
 
 Reserva::Reserva(){}
 

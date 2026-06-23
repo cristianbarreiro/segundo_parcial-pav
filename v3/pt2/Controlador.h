@@ -4,10 +4,10 @@
 #include <list>
 #include <string>
 
-using namespace std;
+#include "Pelicula.h"
+#include "Usuario.h"
 
-class Pelicula;
-class Usuario;
+using namespace std;
 
 class Controlador {
  private:
@@ -15,6 +15,7 @@ class Controlador {
   list<Pelicula*> peliculas;
 
   Controlador();
+  ~Controlador();
 
  public:
   static Controlador* getInstancia();
@@ -23,7 +24,6 @@ class Controlador {
 
   void eliminarPelicula(int idP);
 
-  ~Controlador();
 };
 
 #endif

@@ -1,5 +1,4 @@
 #include "Pelicula.h"
-#include "Comentario.h"
 
 Pelicula::Pelicula(){}
 

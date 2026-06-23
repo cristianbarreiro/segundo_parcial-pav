@@ -3,10 +3,11 @@
 
 #include <string>
 
+#include "DtFecha.h"
+#include "Pelicula.h"
+
 using namespace std;
 
-class DtFecha;
-class Pelicula;
 
 class Puntaje{
 private:

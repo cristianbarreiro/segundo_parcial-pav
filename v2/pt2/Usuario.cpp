@@ -1,8 +1,5 @@
 #include "Usuario.h"
 
-#include "DtMejor.h"
-#include "Puntaje.h"
-
 Usuario::Usuario() {}
 
 Usuario::Usuario(string email) { this->email = email; }

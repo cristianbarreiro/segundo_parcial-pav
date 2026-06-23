@@ -3,21 +3,21 @@
 
 #include <string>
 
+#include "Pelicula.h"
+
 using namespace std;
 
-class Pelicula;
+class Reserva {
+ private:
+  float costo;
+  Pelicula* pelicula;
 
-class Reserva{
-private:
-    float costo;
-    Pelicula* pelicula;
+ public:
+  Reserva();
+  Reserva(float costo, Pelicula* pelicula);
+  virtual ~Reserva();
 
-public:
-    Reserva();
-    Reserva(float costo, Pelicula* pelicula);
-    virtual ~Reserva();
-
-    string getNombrePeli();
+  string getNombrePeli();
 };
 
 #endif

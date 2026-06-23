@@ -1,7 +1,5 @@
 #include "Controlador.h"
 
-#include "Pelicula.h"
-
 Controlador* Controlador::instancia = NULL;
 
 Controlador::Controlador() {}

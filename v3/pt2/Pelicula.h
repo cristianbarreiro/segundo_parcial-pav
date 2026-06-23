@@ -6,8 +6,8 @@
 
 using namespace std;
 
-class Comentario;
-class Usuario;
+#include "Comentario.h";
+#include "Usuario.h";
 
 class Pelicula{
 private:

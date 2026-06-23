@@ -6,7 +6,7 @@
 
 using namespace std;
 
-class Usuario;
+#include "Usuario.h"
 
 class Comentario{
 private:

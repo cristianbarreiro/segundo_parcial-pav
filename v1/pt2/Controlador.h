@@ -4,24 +4,24 @@
 #include <list>
 #include <string>
 
+#include "Usuario.h"
+
 using namespace std;
 
-class Usuario;
+class Controlador {
+ private:
+  static Controlador* instancia;
+  list<Usuario*> usuarios;
 
-class Controlador{
-private:
-    static Controlador* instancia;
-    list<Usuario*> usuarios;
+  Controlador();
+  ~Controlador();
 
-    Controlador();
-    ~Controlador();
+ public:
+  static Controlador* getInstancia();
 
-public:
-    static Controlador* getInstancia();
+  void eliminarUsuarioYReservas(string email);
 
-    void eliminarUsuarioYReservas(string email);
-
-    list<string> verPeliculasReservadasConDebito(string email);
+  list<string> verPeliculasReservadasConDebito(string email);
 };
 
 #endif

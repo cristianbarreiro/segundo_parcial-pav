@@ -4,27 +4,28 @@
 #include <list>
 #include <string>
 
+#include "Usuario.h"
+#include "DtFecha"
+#include "DtMejor"
+
+
 using namespace std;
 
-class Usuario;
-class DtMejor;
-class DtFecha;
+class Controlador {
+ private:
+  static Controlador* instancia;
+  list<Usuario*> usuarios;
 
-class Controlador{
-private:
-    static Controlador* instancia;
-    list<Usuario*> usuarios;
+  Controlador();
 
-    Controlador();
+ public:
+  static Controlador* getInstancia();
 
-public:
-    static Controlador* getInstancia();
+  DtMejor* peliMejorPuntuadaPorUsuario(string email);
 
-    DtMejor* peliMejorPuntuadaPorUsuario(string email);
+  list<string> usuariosQuePuntuaronEnFecha(DtFecha fecha);
 
-    list<string> usuariosQuePuntuaronEnFecha(DtFecha fecha);
-
-    ~Controlador();
+  ~Controlador();
 };
 
 #endif

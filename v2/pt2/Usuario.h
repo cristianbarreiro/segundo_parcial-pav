@@ -4,27 +4,27 @@
 #include <list>
 #include <string>
 
+#include "DtMejor.h"
+#include "Puntaje.h"
+#include "DtFecha.h"
+
 using namespace std;
 
-class Puntaje;
-class DtMejor;
-class DtFecha;
+class Usuario {
+ private:
+  string email;
+  list<Puntaje*> puntajes;
 
-class Usuario{
-private:
-    string email;
-    list<Puntaje*> puntajes;
+ public:
+  Usuario();
+  Usuario(string email);
+  ~Usuario();
 
-public:
-    Usuario();
-    Usuario(string email);
-    ~Usuario();
+  string getEmail();
 
-    string getEmail();
+  DtMejor* peliMejorPuntuada();
 
-    DtMejor* peliMejorPuntuada();
-
-    bool puntuoEnFecha(DtFecha fecha);
+  bool puntuoEnFecha(DtFecha fecha);
 };
 
 #endif

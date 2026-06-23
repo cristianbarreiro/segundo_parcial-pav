@@ -4,23 +4,24 @@
 #include <list>
 #include <string>
 
+#include "Debito.h"
+#include "Reserva.h"
+
 using namespace std;
 
-class Reserva;
+class Usuario {
+ private:
+  string email;
+  list<Reserva*> reservas;
 
-class Usuario{
-private:
-    string email;
-    list<Reserva*> reservas;
+ public:
+  Usuario();
+  Usuario(string email);
+  ~Usuario();
 
-public:
-    Usuario();
-    Usuario(string email);
-    ~Usuario();
+  string getEmail();
 
-    string getEmail();
-
-    list<string> pelisReservadasConDebito();
+  list<string> pelisReservadasConDebito();
 };
 
 #endif
